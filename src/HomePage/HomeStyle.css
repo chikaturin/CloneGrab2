@@ -1,0 +1,40 @@
+.List_Food,.Listcate{
+    display: grid;
+    grid-template-columns: repeat(4,12fr);
+    padding: 10px;
+    grid-gap: 30px;
+  }
+  .img_food,.imgCate{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+  .col{
+    flex:1 0 1%
+    }
+  .infor span{
+    font-size: 100%;
+    padding-right:10px;
+  }
+  .namefood{
+    font-size: 100%;
+    min-height:70px;
+  }
+  .see_all{
+    border:1px solid gray;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+  }
+  .see_all span{
+    font-size: 100%;
+  }
+  .hover_see_all:hover > .see_all {
+    border:1px solid green;
+    color: green;
+    border-radius: 5px;
+  }
+  .nameCate{
+    font-size: 100%;
+    margin-left: 3px;
+  }

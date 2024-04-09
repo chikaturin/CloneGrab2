@@ -1,0 +1,67 @@
+css-reset
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+.body{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.header>a{
+  z-index: 1000;
+  position: fixed; 
+  top: 0; 
+  left: 0;
+  width: 100%; 
+}
+.img_main
+{
+  position:relative;
+}
+.img_main_child{
+  width:100%;
+  height:500px;  z-index: 1;
+
+}
+.logo_child{
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+.logo{
+  top: 0;
+  position: absolute;
+}
+.Footer{
+  width: 100%;
+  height: 300px;
+  background-color: rgb(1,176,78);
+  text-align: center;
+}
