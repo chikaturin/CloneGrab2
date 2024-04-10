@@ -7,7 +7,7 @@ const ItemHome = (prop) => {
     return (
         <div className='Option_food'>
             <img className='img_food ' src={prop.image} alt="Food"></img>
-            <p><h5 className='namefood text-sm text-md text-lg'>{prop.title}</h5></p>
+            <h5 className='namefood text-sm text-md text-lg'>{prop.title}</h5>
             <div className='infor'>
                 <span className='text-sm text-md text-lg'><FontAwesomeIcon icon={faStar} style={{color: "#FFD43B"}} />{prop.rate}</span>
                 <span className='text-sm text-md text-lg'><FontAwesomeIcon icon={faClock} style={{color: "#000000"}} />{prop.time}</span>

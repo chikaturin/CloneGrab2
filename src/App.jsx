@@ -16,13 +16,8 @@ function App() {
           <a href="/"><div className='logo'><img className='logo_child' src={Header}></img></div></a>          
         </div>
         <div className="container">
-          <p></p>
-          <a href="/ListCate">PageListCate</a>
-          <p></p>
-          <a href="/ListStore">PageListStore</a>
           <Routes>
             <Route path="/" element={<Home/>}/>
-            <Route path="/ListCate" element={<ListCate/>}/>
             <Route path="/ListStore" element={<ListStore/>}/>
           </Routes>
         </div>
