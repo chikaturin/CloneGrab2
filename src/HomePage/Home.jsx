@@ -2,13 +2,14 @@ import React from 'react';
 import "./HomeStyle.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import ListHome from "./ListHome";
 import ListCate from "./Catetogy";
+import DetailFood from '../PageDetailFood/DetailFood';
+import ListHome from './ListHome';
 
 const Home = () => {
     return (
         <div>
-            <ListHome></ListHome>
+            <a className='route' href="/DetailFood"><ListHome/></a>
             <h3 style={{marginTop:30, fontWeight:"bold"}}>There's something everone</h3>
             <a className='route' href="/ListStore"><ListCate/></a>
             <h3 style={{marginTop:30, fontWeight:"bold"}}>Vì sao bạn nên Order trên GrabFood?</h3>

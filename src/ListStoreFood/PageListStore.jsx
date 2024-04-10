@@ -23,8 +23,14 @@ const ListStore = () => {
             <div className='Body_In_Home'>
                 <div className='List_Food col'>
                     {DataStore.map((item,index)=>(
-                        <ItemHome key={item.id} image={item.image} title={item.title} rate={item.rate} time={item.time} distance={item.distance}>
-                        </ItemHome>
+                        <a className='route' href="/DetailFood">
+                            <ItemHome key={item.id} 
+                            image={item.image} 
+                            title={item.title} 
+                            rate={item.rate} 
+                            time={item.time} 
+                            distance={item.distance}/>
+                        </a>
                     ))}
                 </div>
             </div>

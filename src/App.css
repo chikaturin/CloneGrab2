@@ -33,6 +33,7 @@ css-reset
   position: relative;
   width: 100%;
   height: 100%;
+  background-color: #efeded;
 }
 .header>a{
   z-index: 1000;
@@ -64,4 +65,8 @@ css-reset
   height: 300px;
   background-color: rgb(1,176,78);
   text-align: center;
+}
+.footer_img{
+  width: 100%;
+  height: 100%;
 }

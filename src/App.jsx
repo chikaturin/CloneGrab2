@@ -4,9 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Home from "./HomePage/Home";
 import { Routes,Route } from "react-router-dom";
-import ListCate from "./HomePage/Catetogy";
 import ListStore from "./ListStoreFood/PageListStore";
+import DetailFood from './PageDetailFood/DetailFood';
 import Header from "./Header.png"
+import footer from "./footer.png"
 
 function App() {
   return (
@@ -19,10 +20,11 @@ function App() {
           <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/ListStore" element={<ListStore/>}/>
+            <Route path="/DetailFood" element={<DetailFood/>}/>
           </Routes>
         </div>
         <div className="Footer">
-        <h1>HiHi Lười làm ạ</h1>
+        <div className='footer'><img className='footer_img' src={footer}></img></div>
         </div>
     </div>
   );
