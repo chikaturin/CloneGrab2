@@ -8,7 +8,7 @@ import ListHome from './ListHome';
 
 const Home = () => {
     return (
-        <div>
+        <div className='container'>
             <a className='route' href="/DetailFood"><ListHome/></a>
             <h3 style={{marginTop:30, fontWeight:"bold"}}>There's something everone</h3>
             <a className='route' href="/ListStore"><ListCate/></a>

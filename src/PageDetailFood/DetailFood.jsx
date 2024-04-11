@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './DetailFoodStyle.css';
 import { Datahome } from '../HomePage/data';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
 import { faStar, faClock ,faCirclePlus} from '@fortawesome/free-solid-svg-icons'; 
+import OrderFood from './OrderFood';
 import { Menudata } from './menudetail';
+
 const ItemDetail = (prop) => {
     return (
         <div className='itemdetail'>
@@ -30,38 +32,47 @@ const ItemMenu = (props) => {
 };
 
 const DetailFood =() => {
+    const [isVisible, setIsVisible] = useState(false);
+    const toggleVisibility = () => {
+        setIsVisible(!isVisible);
+      };
     return (
             <div className='body'>
-                <div className='row'>
-                    <div className='col infor_store'>
-                        {Datahome.map((item, index) => {
-                            if (item.id === 1) {
-                                return (
-                                    <ItemDetail
-                                        key={item.id}
-                                        image={item.image}
-                                        title={item.title}
-                                        rate={item.rate}
-                                        time={item.time}
-                                        distance={item.distance}
-                                    />
-                                );
-                            }
-                            return null;
-                        })}
-                        <p>Cơm</p>
-                        <p>Giờ mở cửa <span className='time'>Hôm nay 10:00-20:00</span></p>
+                <OrderFood toggleVisibility={toggleVisibility} isVisible={isVisible}/>
+                <div className='body_menu'>
+                    <div className='infor_store'>
+                        <div className='container'>
+                            {Datahome.map((item, index) => {
+                                if (item.id === 1) {
+                                    return (
+                                        <ItemDetail
+                                            key={index}
+                                            image={item.image}
+                                            title={item.title}
+                                            rate={item.rate}
+                                            time={item.time}
+                                            distance={item.distance}
+                                        />
+                                    );
+                                }
+                                return null;
+                            })}
+                            <p style={{marginLeft:10}}>Cơm</p>
+                            <p style={{marginLeft:10}}>Giờ mở cửa <span className='time'>Hôm nay 10:00-20:00</span></p>
+                        </div>
                     </div>
-                    <h1 style={{marginTop:50,marginBottom:50}}>Menu</h1>
-                    <div className='List_menu'>
-                    {Menudata.map((item,index)=>(
-                            <ItemMenu 
-                                key={item.id} 
-                                image={item.image} 
-                                name_detail={item.name_detail} 
-                                decription={item.decription} 
-                                price={item.price}/>
-                        ))}
+                    <div className="container">
+                    <h1 style={{marginTop:50,marginBottom:50, marginLeft:10}}>Menu</h1>
+                        <div className='List_menu' onClick={toggleVisibility}>
+                        {Menudata.map((item,index)=>(
+                                <ItemMenu 
+                                    key={item.id} 
+                                    image={item.image} 
+                                    name_detail={item.name_detail} 
+                                    decription={item.decription} 
+                                    price={item.price}/>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>

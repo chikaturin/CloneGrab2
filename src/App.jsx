@@ -16,7 +16,7 @@ function App() {
           <img className='img_main_child' src='https://food.grab.com/static/page-home/VN-new-2.jpg'></img>
           <a href="/"><div className='logo'><img className='logo_child' src={Header}></img></div></a>          
         </div>
-        <div className="container">
+        <div className="">
           <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/ListStore" element={<ListStore/>}/>

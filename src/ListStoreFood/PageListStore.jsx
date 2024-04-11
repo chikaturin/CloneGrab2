@@ -18,7 +18,7 @@ const ItemHome = (prop) => {
 };
 const ListStore = () => {
     return (
-        <div className='body'>
+        <div className='body container'>
             <div className='FindFood'><span><FontAwesomeIcon icon={faMagnifyingGlass} /> Tìm món ăn hoặc quán ăn</span></div>
             <div className='Body_In_Home'>
                 <div className='List_Food col'>

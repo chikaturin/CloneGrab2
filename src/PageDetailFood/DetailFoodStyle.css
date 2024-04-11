@@ -5,8 +5,8 @@
 .body{
     margin-top: 20px;
 }
-.row{
-    margin-bottom: 100px;
+.body_menu{
+    margin-bottom: 30px;
 }
 .item_detail_list
 {
@@ -14,12 +14,12 @@
     height: 100%;
     padding:20px 10px 0px 10px;
     display: flex;
-    background-color: white;
     height: fit-content;
     border-radius: 5px;
+    background-color: white;
 }
 .infor_Detail>span{
-    margin-right: 30px;
+    margin-right: 50px;
 }
 .img_detail
 {
@@ -29,8 +29,11 @@
     margin-right: 10px;
 }
 .infor_store{
+    padding: 20px 0;
     width: 100%;
     background-color: white;
+    margin-bottom: 100px;
+    height: fit-content;
 }
 .infor_store >p{
     margin: 0 10px;
@@ -65,3 +68,91 @@
     overflow: hidden;
     border:1px solid green;
   }
+  .Body_orderFood {
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    position:fixed;
+    top: 0;
+    left: 0;
+}
+.detail_order_black{
+    width: 70%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.3;
+}
+.detail_Orderfood {
+    padding: 20px;
+    background-color: white;
+    float: right; 
+    width: 30%;
+    height: 100%;
+    z-index: 1001; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 1; 
+
+}
+.out{
+    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+}  
+.infor_detail_order{
+    border-bottom: 5px solid rgb(219, 218, 218);
+} 
+.img_detail_order{
+    width: 40%;
+    height: 40%;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.price_order{
+    font-weight: bolder;
+}
+.form-check{
+    font-size: 25px;
+}
+.form-check input{
+    margin-top: 9px;
+}
+.form-check label{
+    width: 100%;
+    font-size: 15px;
+}
+.form-check label span{
+    font-size: 15px;
+    float: right;
+}
+.pay{
+    border-top: 5px solid rgb(219, 218, 218);
+    padding-top: 30px;
+    width: 100%; 
+    margin-top: 10%;
+}
+.decrease,.increase{
+    width: 30%;
+    height: 100%;
+    padding: 5px 15px;
+    border: 1px solid rgb(214, 211, 211);
+    border-radius: 10px;
+    background-color: white;
+}
+.valuecount{
+    margin: 15px 20px;
+}
+.button_pay{
+    width: 70%;
+}
+.button_pay button{
+    width: 90%;
+    background-color: #01B04E;
+    border-radius: 10px;
+    padding: 10px 0%;
+    font-size: 20px;
+    margin-left: 10%;
+    color: white;
+    font-weight: bolder;
+    border: none;
+}
