@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './DetailFoodStyle.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { Datahome } from '../HomePage/data';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
 import { faStar, faClock ,faCirclePlus} from '@fortawesome/free-solid-svg-icons'; 
@@ -20,13 +22,15 @@ const ItemDetail = (prop) => {
 };
 const ItemMenu = (props) => {
     return (
-        <div className='item_detail_list'>
-        <img className='img_detail' src={props.image}></img>
+        <div className='menuitem  col-md-4 col-sm-6 col-xs-12 mb-4'>
+            <div className='item_detail_list'>
+            <img className='img_detail' src={props.image}></img>
                 <div className='infor_menu'>
                     <p className='name_dish'>{props.name_detail}</p>
                     <p className='description'>{props.decription}</p>
                     <p className='price'>{props.price}<span className='add'><FontAwesomeIcon icon={faCirclePlus} style={{color: "#01B04E",}} /></span></p>
                 </div>
+            </div>
         </div>
     );
 };
@@ -63,7 +67,7 @@ const DetailFood =() => {
                     </div>
                     <div className="container">
                     <h1 style={{marginTop:50,marginBottom:50, marginLeft:10}}>Menu</h1>
-                        <div className='List_menu' onClick={toggleVisibility}>
+                        <div className='row' onClick={toggleVisibility}>
                         {Menudata.map((item,index)=>(
                                 <ItemMenu 
                                     key={item.id} 

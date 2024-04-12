@@ -10,8 +10,6 @@
 }
 .item_detail_list
 {
-    width: 100%;
-    height: 100%;
     padding:20px 10px 0px 10px;
     display: flex;
     height: fit-content;
@@ -40,12 +38,6 @@
 }
 .time{
     margin-left: 10px;
-}
-.List_menu{
-    display: grid;
-    grid-template-columns: repeat(3,12fr);
-    padding: 10px;
-    grid-gap: 30px;
 }
 .name_dish{
     color: black;
@@ -77,8 +69,6 @@
     left: 0;
 }
 .detail_order_black{
-    width: 70%;
-    height: 100%;
     background-color: black;
     opacity: 0.3;
 }
@@ -86,7 +76,6 @@
     padding: 20px;
     background-color: white;
     float: right; 
-    width: 30%;
     height: 100%;
     z-index: 1001; 
     position: absolute;
@@ -100,7 +89,7 @@
     border-bottom: 1px solid gray;
 }  
 .infor_detail_order{
-    border-bottom: 5px solid rgb(219, 218, 218);
+    border-bottom: 10px solid rgb(219, 218, 218);
 } 
 .img_detail_order{
     width: 40%;
@@ -125,34 +114,24 @@
     font-size: 15px;
     float: right;
 }
-.pay{
-    border-top: 5px solid rgb(219, 218, 218);
-    padding-top: 30px;
-    width: 100%; 
+.pay{    
     margin-top: 10%;
 }
 .decrease,.increase{
-    width: 30%;
-    height: 100%;
     padding: 5px 15px;
     border: 1px solid rgb(214, 211, 211);
     border-radius: 10px;
     background-color: white;
 }
 .valuecount{
-    margin: 15px 20px;
+    margin: 5px 20px;
 }
 .button_pay{
-    width: 70%;
-}
-.button_pay button{
-    width: 90%;
-    background-color: #01B04E;
-    border-radius: 10px;
-    padding: 10px 0%;
-    font-size: 20px;
-    margin-left: 10%;
-    color: white;
-    font-weight: bolder;
+    background-color: greenyellow;
     border: none;
+    border-radius: 5px;
+}
+.count{
+    justify-content: center;
+    align-items: center;
 }

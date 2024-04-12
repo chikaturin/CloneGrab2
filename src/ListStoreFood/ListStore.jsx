@@ -24,7 +24,7 @@ const ListStore = () => {
     return (
         <div className='body container'> 
             <div className='FindFood'><span><FontAwesomeIcon icon={faMagnifyingGlass} /> Tìm món ăn hoặc quán ăn</span></div>
-            <div className='Body_In_Home row justify-content-center'> {/* Thêm lớp justify-content-center vào đây */}
+            <div className='Body_In_Home row justify-content-center'>
                     {DataStore.map((item,index)=>(
                             <ItemHome 
                                 image={item.image} 

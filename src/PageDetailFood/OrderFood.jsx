@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
 import {faX} from '@fortawesome/free-solid-svg-icons'; 
-import { Menudata } from './menudetail';
 
 const ItemMenu = (props) => {
     return (
-        <div className='item_detail_order d-flex'>
-            <img className='img_detail_order' src={props.image}></img>
-            <div className='infor_menu_order'>
+        <div className='item_detail_order row'>
+            <img className='img_detail_order col-md-6 col-sm-12' src={props.image}></img>
+            <div className='infor_menu_order col-md-6 col-sm-12'>
                 <h3 className='name_dish_order'>{props.name_detail}</h3>
                 <p className='description_order'>{props.decription}</p>
                 <p className='price_order'>{props.price}</p>
@@ -40,10 +39,10 @@ const OrderFood = ({ toggleVisibility, isVisible }) => {
     if(isVisible)
     {
         return (
-            <div className='Body_orderFood d-flex'>
-                <div className="detail_order_black" onClick={toggleVisibility}>
+            <div className='Body_orderFood row'>
+                <div className="detail_order_black col-md-7" onClick={toggleVisibility}>
                 </div>
-                <div className="detail_Orderfood">
+                <div className="detail_Orderfood col-md-5">
                     <p className='out' onClick={toggleVisibility}><FontAwesomeIcon icon={faX} /></p>
                     <div className="infor_detail_order">
                         <ItemMenu 
@@ -54,24 +53,24 @@ const OrderFood = ({ toggleVisibility, isVisible }) => {
                     </div>
                     <div className="add_option_order mt-4">
                         <h3 style={{fontSize:20}}>Thêm</h3>
-                            <div class="form-check">
+                            <div className="form-check">
                             <input className='form-check-input' type="checkbox" name="tea" value="tea"/>
-                            <label className='form-check-label' for="tea"> Trà tắc <span>7.000</span></label><br/>
+                            <label className='form-check-label' > Trà tắc <span>7.000</span></label><br/>
                             <input className='form-check-input' type="checkbox" name="tea" value="tea"/>
-                            <label className='form-check-label' for="tea"> Trà tắc <span>7.000</span></label><br/>
+                            <label className='form-check-label'> Trà tắc <span>7.000</span></label><br/>
                             <input className='form-check-input' type="checkbox" name="tea" value="tea"/>
-                            <label className='form-check-label' for="tea"> Trà tắc <span>7.000</span></label><br/>
+                            <label className='form-check-label'> Trà tắc <span>7.000</span></label><br/>
                             <input className='form-check-input' type="checkbox" name="tea" value="tea"/>
-                            <label className='form-check-label' for="tea"> Trà tắc <span>7.000</span></label><br/>
+                            <label className='form-check-label'> Trà tắc <span>7.000</span></label><br/>
                             </div>
                     </div>
-                    <div className="pay d-flex">
-                        <div className="count d-flex">
+                    <div className="pay container row">
+                        <div className="count d-flex col-md-3 col-sm-12">
                             <button className='decrease' onClick={decrementCount}>-</button>
                             <div className='valuecount'>{count}</div>
                             <button className='increase' onClick={incrementCount}>+</button>
                         </div>
-                        <div className="button_pay"><button>{content}</button></div>
+                        <button className="button_pay mt-2 col-md-9 col-sm-12">{content}</button>
                     </div>
                 </div>
             </div>
