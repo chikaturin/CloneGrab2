@@ -127,9 +127,10 @@
     margin: 5px 20px;
 }
 .button_pay{
-    background-color: greenyellow;
+    background-color: #01B04E;
     border: none;
     border-radius: 5px;
+    padding: 5px 0;
 }
 .count{
     justify-content: center;

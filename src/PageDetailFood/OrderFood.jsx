@@ -70,7 +70,7 @@ const OrderFood = ({ toggleVisibility, isVisible }) => {
                             <div className='valuecount'>{count}</div>
                             <button className='increase' onClick={incrementCount}>+</button>
                         </div>
-                        <button className="button_pay mt-2 col-md-9 col-sm-12">{content}</button>
+                        <button className="button_pay px-2 col-md-9 col-sm-12">{content}</button>
                     </div>
                 </div>
             </div>
