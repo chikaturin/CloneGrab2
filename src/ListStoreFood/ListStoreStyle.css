@@ -16,3 +16,6 @@ css-reset
 .FindFood span{
     margin-left:3%;
 }
+.Option_food{
+    width: 100%;
+}
