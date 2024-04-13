@@ -1,0 +1,4 @@
+[[redirects]]
+from ="/*"
+to="PageListStore.jsx"
+status=200
