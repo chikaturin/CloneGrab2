@@ -11,11 +11,11 @@ import { Menudata } from './menudetail';
 const ItemDetail = (prop) => {
     return (
         <div className='itemdetail'>
-            <h1 className='name_detail text-sm text-md text-lg'>{prop.title}</h1>
+            <h1 className='name_detail '>{prop.title}</h1>
             <div className='infor_Detail'>
-                <span className='text-sm text-md text-lg'><FontAwesomeIcon icon={faStar} style={{color: "#FFD43B"}} />{prop.rate}</span>
-                <span className='text-sm text-md text-lg'><FontAwesomeIcon icon={faClock} style={{color: "#000000"}} />{prop.time}</span>
-                <span className='text-sm text-md text-lg'>•{prop.distance}</span>
+                <span className=''><FontAwesomeIcon icon={faStar} style={{color: "#FFD43B"}} />{prop.rate}</span>
+                <span className=''><FontAwesomeIcon icon={faClock} style={{color: "#000000"}} />{prop.time}</span>
+                <span className=''>•{prop.distance}</span>
             </div>
         </div>
     );
