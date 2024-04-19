@@ -44,8 +44,8 @@ function App() {
       <div className='hidden sm:block w-full mb-64'>
         <div style={{ backgroundColor: scrollPosition > 10 ? 'white' : 'transparent' }} className=" justify-center z-50 w-full h-fit fixed">
           <div className="header_nav container w-full h-fit z-50 flex">
-            <img src="https://food.grab.com/static/images/logo-grabfood2.svg" alt="" className=" w-20 h-20 sm:w-28 sm:h-20 z-0" />
-            <div className="w-full mt-3 ">
+            <a href="/"><img src="https://food.grab.com/static/images/logo-grabfood2.svg" alt="" className=" w-20 h-20 sm:w-36 sm:h-28 z-0" /></a>      
+            <div className="w-full mt-4 ">
               <span className='mr-4 bg-white p-2 rounded float-right'>Đăng nhập/Đăng ký</span>
               <span className='mr-4 bg-white p-2 rounded float-right'><FontAwesomeIcon icon={faShoppingBag} /></span>
             </div>
@@ -68,7 +68,7 @@ function App() {
         </div>
       </div>
 
-      <div className=" bg-white sm:hidden justify-center w-full h-fit fixed">
+      <div className="z-50 bg-white sm:hidden justify-center w-full h-fit">
           <div className="header_nav container w-full h-fit z-50 flex">
             <img src="https://food.grab.com/static/images/logo-grabfood2.svg" alt="" className=" w-20 h-20 sm:w-28 sm:h-20 z-0" />
             <div className="w-full mt-3 ">
@@ -78,7 +78,7 @@ function App() {
           </div>  
       </div>
 
-      <div className="">
+      <div className=" container">
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/PageListStore" element={<PageListStore/>}/>
@@ -109,7 +109,7 @@ function App() {
             <img className='w-44 h-40' src="https://food.grab.com/static/images/logo-appstore.svg" alt="" />
             <img className='w-44 h-40 ml-3' src="https://food.grab.com/static/images/logo-playstore.svg" alt="" />
           </div>
-          <div className=' mt-16 sm:text-right grid grid-cols-1 sm:grid-cols-2'>
+          <div className=' mt-16 sm:text-right grid grid-cols-1 sm:grid-cols-2 mb-2'>
             <span className='text-white text-sm'>© 2024 Grab</span>
             <span className='sm:ml-2 text-white text-sm'>Câu hỏi thường gặp • Chính sách bảo mật</span>
           </div>
