@@ -24,7 +24,7 @@ const ListStore = () => {
     return (
         <div className='body container'> 
             <div className='FindFood'><span><FontAwesomeIcon icon={faMagnifyingGlass} /> Tìm món ăn hoặc quán ăn</span></div>
-            <div className='w-full justify-items-center grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 px-4 my-8'>
+            <div className='w-full justify-items-center grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 ml-2 px-3 my-8'>
                 <div className='w-full mb-3'>
                     <span className='z-10 font-bold pl-12 sm:pl-16 mt-16 w-fit mb-3  absolute '>Ở gần tôi</span>
                     <img className='w-40 h-36 sm:w-48 sm:h-40 opacity-45 relative' src="https://food.grab.com/static/images/placeholder-restaurant-2by1.jpg" alt="" />
