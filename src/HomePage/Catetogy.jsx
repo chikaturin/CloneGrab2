@@ -4,16 +4,16 @@ import { DataCate } from './Home_Catetogy';
 
 const Catetogy = (props) => {
     return (
-        <div className='col-md-3 col-sm-6 col-xs-12 px-2'>
-            <img className='imgCate' src={props.img}></img>
-            <p className='nameCate text-sm text-md text-lg'> {props.Namecate}</p>
+        <div className='px-2 mb-12'>
+            <img className='imgCate rounded-md' src={props.img}></img>
+            <p className='nameCate'> {props.Namecate}</p>
         </div>
     );
 };
 const ListCate = () => {
     return (
-        <div className='row'>
-            <div className='Listcate row'>
+        <div className=''>
+            <div className='Listcate grid grid-cols-2 sm:grid-cols-4'>
                 {
                     DataCate.map((item,index)=>(
                     <Catetogy Catetogy key={item.id} img={item.image} Namecate={item.catename}></Catetogy>
