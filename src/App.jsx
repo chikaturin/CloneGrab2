@@ -70,7 +70,7 @@ function App() {
 
       <div className="z-50 bg-white sm:hidden justify-center w-full h-fit">
           <div className="header_nav container w-full h-fit z-50 flex">
-            <img src="https://food.grab.com/static/images/logo-grabfood2.svg" alt="" className=" w-20 h-20 sm:w-28 sm:h-20 z-0" />
+          <a href="/"><img src="https://food.grab.com/static/images/logo-grabfood2.svg" alt="" className=" w-20 h-20 sm:w-36 sm:h-28 z-0" /></a>      
             <div className="w-full mt-3 ">
               <span className='mr-4 bg-white p-2 rounded float-right'>Đăng nhập/Đăng ký</span>
               <span className='mr-4 bg-white p-2 rounded float-right'><FontAwesomeIcon icon={faShoppingBag} /></span>

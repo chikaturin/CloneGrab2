@@ -5,14 +5,14 @@ import { Datahome } from './data';
 
 const ItemHome = (prop) => {
     return (
-        <div className='col-md-3 col-sm-6 col-xs-12 px-2 '> 
+        <div className='px-2'> 
             <div className='Option_food'>
-                <img className='img_food' src={prop.image} alt="Food"></img>
-                <h5 className='namefood text-sm text-md text-lg'>{prop.title}</h5>
-                <div className='infor'>
-                    <span className='text-sm text-md text-lg'><FontAwesomeIcon icon={faStar} style={{color: "#FFD43B"}} />{prop.rate}</span>
-                    <span className='text-sm text-md text-lg'><FontAwesomeIcon icon={faClock} style={{color: "#000000"}} />{prop.time}</span>
-                    <span className='text-sm text-md text-lg'>•{prop.distance}</span>
+                <img className='img_food rounded-sm' src={prop.image} alt="Food"></img>
+                <h5 className='namefood text-xl font-bold min-h-20'>{prop.title}</h5>
+                <div className='infor grid grid-cols-3'>
+                    <span className=''><FontAwesomeIcon icon={faStar} style={{color: "#FFD43B"}} />{prop.rate}</span>
+                    <span className=''><FontAwesomeIcon className='mr-2' icon={faClock} style={{color: "#000000"}} />{prop.time}</span>
+                    <span className=''>•{prop.distance}</span>
                 </div>
             </div>
         </div>
@@ -22,15 +22,11 @@ const ItemHome = (prop) => {
 const ListHome = () => {
     return (
         <div>
-            <div className='TitleHome'>
-                <h1>Ưa đãi GrabFood tại <span style={{color:"#01B04E"}}>Hà Nội</span></h1>
-            </div>
-            <div className='Body_In_Home  row'>
+            <div className='Body_In_Home  grid grid-cols-2 sm:grid-cols-4'>
                 {Datahome.map((item,index)=>(
                     <ItemHome key={item.id} image={item.image} title={item.title} rate={item.rate} time={item.time} distance={item.distance} />
                 ))}
             </div>
-            <div className='hover_see_all'><div className='see_all'><span>See all promotions</span></div></div>
         </div>
     );
 };
