@@ -1,5 +1,4 @@
 import React from 'react';
-import "./HomeStyle.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import ListCate from "./Catetogy";
