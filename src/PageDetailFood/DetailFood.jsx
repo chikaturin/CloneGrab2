@@ -115,7 +115,7 @@ const DetailFood =() => {
 
                         <div className='bg-gray-100' id='x1'>
                             <div className="container ">
-                                <p style={{marginTop:10,marginBottom:50, marginLeft:10}}>Menu</p>
+                                <p style={{marginTop:10,marginBottom:50, marginLeft:10}}>Menu2</p>
                                 <div className='row' onClick={toggleVisibility}>
                                 {Menudata.map((item,index)=>(
                                         <ItemMenu 
