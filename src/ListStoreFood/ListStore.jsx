@@ -24,37 +24,38 @@ const ListStore = () => {
     return (
         <div className='body container'> 
             <div className='FindFood'><span><FontAwesomeIcon icon={faMagnifyingGlass} /> Tìm món ăn hoặc quán ăn</span></div>
-            <div class='flex justify-between items-center'>
-                <div className='w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 xl:grid-cols-6 my-8'>
-                    <div className='w-full mb-3 px-2'>
-                        <span className='z-10 font-bold pl-12 sm:pl-16 mt-16 w-fit mb-3  absolute '>Ở gần tôi</span>
-                        <img className='w-44 h-36 sm:w-48 sm:h-40 opacity-45 relative' src="https://food.grab.com/static/images/placeholder-restaurant-2by1.jpg" alt="" />
+            <div className='w-full container'>
+                <div className='w-full grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 my-8 justify-items-center'>
+                    <div className='w-full justify-items-center mb-3 px-2 relative'>
+                        <span className='z-10 font-bold  w-full text-center mb-3 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2'>Ở gần tôi</span>
+                        <img className='opacity-45 relative' src="https://food.grab.com/static/images/placeholder-restaurant-2by1.jpg" alt="" />
                     </div>
-                    <div className='w-full mb-3 px-2'>
-                        <span className='z-10 font-bold pl-12 sm:pl-16 mt-16  w-fit mb-3  absolute '>Ở gần tôi</span>
-                        <img className='w-44 h-36 sm:w-48 sm:h-40 opacity-45 relative' src="https://food.grab.com/static/images/placeholder-restaurant-2by1.jpg" alt="" />
+                    <div className='w-full justify-items-center mb-3 px-2 relative'>
+                        <span className='z-10 font-bold  w-full text-center mb-3 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2'>Ở gần tôi</span>
+                        <img className='opacity-45 relative' src="https://food.grab.com/static/images/placeholder-restaurant-2by1.jpg" alt="" />
                     </div>
-                    <div className='w-full mb-3 px-2'>
-                        <span className='z-10 font-bold pl-12 sm:pl-16 mt-16  w-fit mb-3  absolute '>Ở gần tôi</span>
-                        <img className='w-44 h-36 sm:w-48 sm:h-40 opacity-45 relative' src="https://food.grab.com/static/images/placeholder-restaurant-2by1.jpg" alt="" />
+                    <div className='w-full justify-items-center mb-3 px-2 relative'>
+                        <span className='z-10 font-bold  w-full text-center mb-3 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2'>Ở gần tôi</span>
+                        <img className='opacity-45 relative' src="https://food.grab.com/static/images/placeholder-restaurant-2by1.jpg" alt="" />
                     </div>
-                    <div className='w-full mb-3 px-2'>
-                        <span className='z-10 font-bold pl-12 sm:pl-16 mt-16  w-fit mb-3  absolute '>Ở gần tôi</span>
-                        <img className='w-44 h-36 sm:w-48 sm:h-40 opacity-45 relative' src="https://food.grab.com/static/images/placeholder-restaurant-2by1.jpg" alt="" />
+                    <div className='w-full justify-items-center mb-3 px-2 relative'>
+                        <span className='z-10 font-bold  w-full text-center mb-3 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2'>Ở gần tôi</span>
+                        <img className='opacity-45 relative' src="https://food.grab.com/static/images/placeholder-restaurant-2by1.jpg" alt="" />
                     </div>
-                    <div className='w-full mb-3 px-2'>
-                        <span className='z-10 font-bold pl-12 sm:pl-16 mt-16  w-fit mb-3  absolute '>Ở gần tôi</span>
-                        <img className='w-44 h-36 sm:w-48 sm:h-40 opacity-45 relative' src="https://food.grab.com/static/images/placeholder-restaurant-2by1.jpg" alt="" />
+                    <div className='w-full justify-items-center mb-3 px-2 relative'>
+                        <span className='z-10 font-bold  w-full text-center mb-3 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2'>Ở gần tôi</span>
+                        <img className='opacity-45 relative' src="https://food.grab.com/static/images/placeholder-restaurant-2by1.jpg" alt="" />
                     </div>
-                    <div className='w-full mb-3 px-2'>
-                        <span className='z-10 font-bold pl-12 sm:pl-16 mt-16  w-fit mb-3  absolute '>Ở gần tôi</span>
-                        <img className='w-44 h-36 sm:w-48 sm:h-40 opacity-45 relative' src="https://food.grab.com/static/images/placeholder-restaurant-2by1.jpg" alt="" />
+                    <div className='w-full justify-items-center mb-3 px-2 relative'>
+                        <span className='z-10 font-bold  w-full text-center mb-3 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2'>Ở gần tôi</span>
+                        <img className='opacity-45 relative' src="https://food.grab.com/static/images/placeholder-restaurant-2by1.jpg" alt="" />
                     </div>
                 </div>
             </div>
             <div className='Body_In_Home grid grid-cols-2 sm:grid-cols-4'>
                     {DataStore.map((item,index)=>(
                             <ItemHome 
+                                key={item.id}
                                 image={item.image} 
                                 title={item.title} 
                                 rate={item.rate} 

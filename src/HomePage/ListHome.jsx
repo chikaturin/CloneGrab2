@@ -21,7 +21,7 @@ const ItemHome = (prop) => {
 
 const ListHome = () => {
     return (
-        <div>
+        <div className='container'>
             <div className='Body_In_Home  grid grid-cols-2 sm:grid-cols-4'>
                 {Datahome.map((item,index)=>(
                     <ItemHome key={item.id} image={item.image} title={item.title} rate={item.rate} time={item.time} distance={item.distance} />

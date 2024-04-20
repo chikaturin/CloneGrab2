@@ -12,38 +12,23 @@ import './App.css'
 
 function App() {
   const [scrollPosition, setScrollPosition] = useState(0);
-  let location="";
   useEffect(() => {
     const handleScroll = () => {
       const position = window.scrollY;
       setScrollPosition(position);
     };
-    navigator.geolocation.getCurrentPosition(function (position){
-      location=position.coords;
-    });
     window.addEventListener('scroll', handleScroll);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   },);
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      const latitude = position.coords.latitude;
-      const longitude = position.coords.longitude;
-      console.log('Latitude:', latitude);
-      console.log('Longitude:', longitude);
-      // Đoạn mã xử lý dữ liệu vị trí ở đây
-    });
-  } else {
-    console.log('Trình duyệt không hỗ trợ định vị');
-  }
   return (
     <div className="body m-0">
 
-      <div className='hidden sm:block w-full mb-64'>
+      <div className=' hidden sm:block w-full mb-64'>
         <div style={{ backgroundColor: scrollPosition > 10 ? 'white' : 'transparent' }} className=" justify-center z-50 w-full h-fit fixed">
-          <div className="header_nav container w-full h-fit z-50 flex">
+          <div className="header_nav container w-full h-fit z-40 flex">
             <a href="/"><img src="https://food.grab.com/static/images/logo-grabfood2.svg" alt="" className=" w-20 h-20 sm:w-36 sm:h-28 z-0" /></a>      
             <div className="w-full mt-4 ">
               <span className='mr-4 bg-white p-2 rounded float-right'>Đăng nhập/Đăng ký</span>
@@ -68,9 +53,9 @@ function App() {
         </div>
       </div>
 
-      <div className="z-50 bg-white sm:hidden justify-center w-full h-fit">
-          <div className="header_nav container w-full h-fit z-50 flex">
-          <a href="/"><img src="https://food.grab.com/static/images/logo-grabfood2.svg" alt="" className=" w-36 h-24 z-0" /></a>      
+      <div className="z-50 block sm:hidden justify-center">
+          <div style={{ position: scrollPosition > 10 ? 'fixed' : 'static' }} className="header_nav container z-50 flex top-0 bg-white fixed w-full h-fit">
+            <a href="/"><img src="https://food.grab.com/static/images/logo-grabfood2.svg" alt="" className=" w-36 h-24 z-0" /></a>      
             <div className="w-full h-24" style={{paddingTop:26}}>
               <span className='mr-4 bg-white p-2 rounded float-right'>Đăng nhập/Đăng ký</span>
               <span className='mr-4 bg-white p-2 rounded float-right'><FontAwesomeIcon icon={faShoppingBag} /></span>
@@ -78,7 +63,7 @@ function App() {
           </div>  
       </div>
 
-      <div className=" container">
+      <div className="">
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/PageListStore" element={<PageListStore/>}/>

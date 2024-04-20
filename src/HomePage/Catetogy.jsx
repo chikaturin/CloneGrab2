@@ -12,7 +12,7 @@ const Catetogy = (props) => {
 };
 const ListCate = () => {
     return (
-        <div className=''>
+        <div className='container'>
             <div className='Listcate grid grid-cols-2 sm:grid-cols-4'>
                 {
                     DataCate.map((item,index)=>(
