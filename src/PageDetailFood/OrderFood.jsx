@@ -41,7 +41,7 @@ const OrderFood = ({ toggleVisibility, isVisible }) => {
     if(isVisible)
     {
         return (
-                <div className='grid grid-cols-1 overflow-y-scroll sm:grid-cols-2 fixed top-0 left-0 w-full overflow-hidden h-full z-50'>
+                <div className='grid grid-cols-1 overflow-y-scroll md:grid-cols-2 fixed top-0 left-0 w-full overflow-hidden h-full z-50'>
                     <div className="bg-black opacity-15 hidden sm:block" onClick={toggleVisibility}></div>
                     <div className="bg-white">
                     <p className='p-4 border border-bottom container' onClick={toggleVisibility}><FontAwesomeIcon icon={faX} /></p>
@@ -69,13 +69,15 @@ const OrderFood = ({ toggleVisibility, isVisible }) => {
                                 <div className='mt-1 px-4 grid grid-cols-2'><span className='text-lg mt-1'>Trà Tắc</span><span className='text-right w-full'>7.000</span></div><br/>
                             </div>
                     </div>
-                    <div className="pay container h-fit my-4 grid grid-cols-1 sm:grid-cols-2">
-                        <div className="count d-flex col-md-3 col-sm-12 mb-4 translate translate-x-1/4 ml-4 sm:ml-0 ">
-                            <button className=' border p-1 px-3 rounded' onClick={decrementCount}><span className='text-xl text-blue-500'>-</span></button>
-                            <div className='valuecount p-3 px-4'>{count}</div>
-                            <button className=' border p-1 px-3 rounded' onClick={incrementCount}><span className='text-xl text-blue-500'>+</span></button>
+                    <div className=''>
+                        <div className="pay h-fit my-4 grid grid-cols-1 sm:grid-cols-2">
+                            <div className="count d-flex col-md-3 col-sm-12 mb-4 translate translate-x-1/2 w-fit">
+                                <button className=' border p-1 px-3 rounded' onClick={decrementCount}><span className='text-xl text-blue-500'>-</span></button>
+                                <div className='valuecount p-3 px-4'>{count}</div>
+                                <button className=' border p-1 px-3 rounded' onClick={incrementCount}><span className='text-xl text-blue-500'>+</span></button>
+                            </div>
+                            <button className="button_pay px-2 h-10 translate translate-y-1/4 bg-green-600 rounded"><span className='text-white'>{content}</span></button>
                         </div>
-                        <button className="button_pay px-2 h-10 translate translate-y-1/4 bg-green-600 rounded"><span className='text-white'>{content}</span></button>
                     </div>
                 </div>
             </div>
