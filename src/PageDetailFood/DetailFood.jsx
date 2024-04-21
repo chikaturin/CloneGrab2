@@ -72,7 +72,7 @@ const DetailFood = () => {
         setActiveIndex(newIndex);
     }, [scrollPosition]);
     useEffect(() => {
-        const scrollThresholds = [1000,3000,4200,9000,12200,15500];
+        const scrollThresholds = [1000,3000,4200,9000,12000,15200];
         let newIndex = 0;
 
         for (let i = 0; i < scrollThresholds.length; i++) {
