@@ -52,29 +52,33 @@ const OrderFood = ({ toggleVisibility, isVisible }) => {
                                 decription={"Gà Ta . Ăn Kèm với Mắm Cà + Salat trộn . Đặc biệt kèm theo muối tiêu chanh pha sẵn"} 
                                 price={"63.000"}/>
                     </div>
-                    <div className="pl-6 mt-4 ">
-                        <h3 className='text-xl font-bold'>Thêm</h3>
-                            <div className="form-check py-4 w-full">
-                                <input className='form-check-input text-2xl' type="checkbox" name="tea" value="tea"/>
-                                <div className='mt-1 px-4 grid grid-cols-2'><span className='text-lg mt-1'>Trà Tắc</span><span className='text-right w-full'>7.000</span></div><br/>
-                                <input className='form-check-input text-2xl' type="checkbox" name="tea" value="tea"/>
-                                <div className='mt-1 px-4 grid grid-cols-2'><span className='text-lg mt-1'>Trà Tắc</span><span className='text-right w-full'>7.000</span></div><br/>
-                                <input className='form-check-input text-2xl' type="checkbox" name="tea" value="tea"/>
-                                <div className='mt-1 px-4 grid grid-cols-2'><span className='text-lg mt-1'>Trà Tắc</span><span className='text-right w-full'>7.000</span></div><br/>
-                                <input className='form-check-input text-2xl' type="checkbox" name="tea" value="tea"/>
-                                <div className='mt-1 px-4 grid grid-cols-2'><span className='text-lg mt-1'>Trà Tắc</span><span className='text-right w-full'>7.000</span></div><br/>
-                                <input className='form-check-input text-2xl' type="checkbox" name="tea" value="tea"/>
-                                <div className='mt-1 px-4 grid grid-cols-2'><span className='text-lg mt-1'>Trà Tắc</span><span className='text-right w-full'>7.000</span></div><br/>
-                                <input className='form-check-input text-2xl' type="checkbox" name="tea" value="tea"/>
-                                <div className='mt-1 px-4 grid grid-cols-2'><span className='text-lg mt-1'>Trà Tắc</span><span className='text-right w-full'>7.000</span></div><br/>
-                            </div>
+                    <div className=' container'>
+                        <div className="pl-6 mt-4 ">
+                            <h3 className='text-xl font-bold'>Thêm</h3>
+                                <div className="form-check py-4 w-full">
+                                    <input className='form-check-input text-2xl' type="checkbox" name="tea" value="tea"/>
+                                    <div className='mt-1 px-4 grid grid-cols-2'><span className='text-lg mt-1'>Trà Tắc</span><span className='text-right w-full'>7.000</span></div><br/>
+                                    <input className='form-check-input text-2xl' type="checkbox" name="tea" value="tea"/>
+                                    <div className='mt-1 px-4 grid grid-cols-2'><span className='text-lg mt-1'>Trà Tắc</span><span className='text-right w-full'>7.000</span></div><br/>
+                                    <input className='form-check-input text-2xl' type="checkbox" name="tea" value="tea"/>
+                                    <div className='mt-1 px-4 grid grid-cols-2'><span className='text-lg mt-1'>Trà Tắc</span><span className='text-right w-full'>7.000</span></div><br/>
+                                    <input className='form-check-input text-2xl' type="checkbox" name="tea" value="tea"/>
+                                    <div className='mt-1 px-4 grid grid-cols-2'><span className='text-lg mt-1'>Trà Tắc</span><span className='text-right w-full'>7.000</span></div><br/>
+                                    <input className='form-check-input text-2xl' type="checkbox" name="tea" value="tea"/>
+                                    <div className='mt-1 px-4 grid grid-cols-2'><span className='text-lg mt-1'>Trà Tắc</span><span className='text-right w-full'>7.000</span></div><br/>
+                                    <input className='form-check-input text-2xl' type="checkbox" name="tea" value="tea"/>
+                                    <div className='mt-1 px-4 grid grid-cols-2'><span className='text-lg mt-1'>Trà Tắc</span><span className='text-right w-full'>7.000</span></div><br/>
+                                </div>
+                        </div>
                     </div>
-                    <div className=''>
+                    <div className=' container w-full'>
                         <div className="pay h-fit my-4 grid grid-cols-1 sm:grid-cols-2">
-                            <div className="count d-flex col-md-3 col-sm-12 mb-4 translate translate-x-1/2 w-fit">
-                                <button className=' border p-1 px-3 rounded' onClick={decrementCount}><span className='text-xl text-blue-500'>-</span></button>
-                                <div className='valuecount p-3 px-4'>{count}</div>
-                                <button className=' border p-1 px-3 rounded' onClick={incrementCount}><span className='text-xl text-blue-500'>+</span></button>
+                            <div className='w-full'>
+                                <div className="flex justify-center mb-4">
+                                    <button className='border p-1 px-3 rounded' onClick={decrementCount}><span className='text-xl text-blue-500'>-</span></button>
+                                    <div className='valuecount p-3 px-4'>{count}</div>
+                                    <button className='border p-1 px-3 rounded' onClick={incrementCount}><span className='text-xl text-blue-500'>+</span></button>
+                                </div>
                             </div>
                             <button className="button_pay px-2 h-10 translate translate-y-1/4 bg-green-600 rounded"><span className='text-white'>{content}</span></button>
                         </div>
