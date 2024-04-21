@@ -40,6 +40,7 @@ const ItemMenu = (props) => {
 const DetailFood = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
     const [activeIndex, setActiveIndex] = useState(0);
+    const [activeIndex2, setActiveIndex2] = useState(0);
     const [colors, setColors] = useState(['#01B04E', 'black', 'black', 'black', 'black', 'black']); 
     const [isVisible, setIsVisible] = useState(false);
     
@@ -69,6 +70,18 @@ const DetailFood = () => {
         }
 
         setActiveIndex(newIndex);
+    }, [scrollPosition]);
+    useEffect(() => {
+        const scrollThresholds = [1000,3000,6200,9300,12500,16000];
+        let newIndex = 0;
+
+        for (let i = 0; i < scrollThresholds.length; i++) {
+            if (scrollPosition >= scrollThresholds[i]) {
+                newIndex = i;
+            }
+        }
+
+        setActiveIndex2(newIndex);
     }, [scrollPosition]);
 
     const handleClick = (index) => {
@@ -103,11 +116,11 @@ const DetailFood = () => {
                     </div>
                 </div>
 
-                <div className='w-full top-9 h-fit min-h-32 block sm:hidden' style={{ backgroundColor: scrollPosition > 130 ? 'white' : 'transparent', position: scrollPosition > 130 ? 'fixed' : 'static' }}>
+                <div className='w-full top-9 h-fit min-h-48 block sm:hidden' style={{ backgroundColor: scrollPosition > 130 ? 'white' : 'transparent', position: scrollPosition > 130 ? 'fixed' : 'static' }}>
                     <div className="container">
                         <div className='container w-full grid my-4 grid-cols-6 text-center translate translate-y-1/2'>
                             {ChooseMenu.map((item, index) => (
-                                <a className='pb-3' href={`#x${item.id}`} key={index} style={{ color: colors[index], borderBottom: index === activeIndex ? '3px solid #01B04E' : 'none', color: index === activeIndex ? '#01B04E' : 'black' }} onClick={() => handleClick(index)}>{item.Title}</a>
+                                <a className='pb-3' href={`#x${item.id}`} key={index} style={{ color: colors[index], borderBottom: index === activeIndex2 ? '3px solid #01B04E' : 'none', color: index === activeIndex2 ? '#01B04E' : 'black' }} onClick={() => handleClick(index)}>{item.Title}</a>
                             ))}
                         </div>
                     </div>
@@ -141,6 +154,8 @@ const DetailFood = () => {
                         ))}
                     </div>
                 </div>
+
+
             </div>
         </div>
     );
