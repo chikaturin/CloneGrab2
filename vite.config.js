@@ -11,8 +11,7 @@ export default defineConfig({
       filename:"remoteEntry.js",
       remotes: {},
       exposes: {
-        "./Header":"./src/Header",
-        "./Footer":"./src/Footer",
+        "./App":"./src/App",
       },
       shared: ["react", "react-dom"],
     }),
