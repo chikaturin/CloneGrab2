@@ -116,7 +116,7 @@ const DetailFood = () => {
                     </div>
                 </div>
 
-                <div className='w-full top-9 h-fit min-h-48 block sm:hidden' style={{ backgroundColor: scrollPosition > 130 ? 'white' : 'transparent', position: scrollPosition > 130 ? 'fixed' : 'static' }}>
+                <div className='w-full top-16 bg-white h-fit min-h-8 pb-6 block sm:hidden sticky'>
                     <div className="container">
                         <div className='container w-full grid my-4 grid-cols-6 text-center translate translate-y-1/2'>
                             {ChooseMenu.map((item, index) => (
@@ -126,7 +126,7 @@ const DetailFood = () => {
                     </div>
                 </div>
 
-                <div className='w-full top-20 h-fit min-h-48 sm:min-h-0 hidden sm:block' style={{ backgroundColor: scrollPosition > 730 ? 'white' : 'transparent', position: scrollPosition > 730 ? 'fixed' : 'static' }}>
+                <div className='w-full top-28 bg-white pb-6 h-fit min-h-48 sm:min-h-0 hidden sm:block sticky'>
                     <div className="container">
                         <div className='container w-full grid my-4 grid-cols-6 text-center translate translate-y-1/2'>
                             {ChooseMenu.map((item, index) => (
